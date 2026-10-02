@@ -1,0 +1,95 @@
+---
+---
+
+// Widen minima's default 800px column so the page uses more of a desktop screen.
+$content-width: 1100px;
+
+@import "minima";
+
+.headshot {
+  float: right;
+  width: 160px;
+  height: 160px;
+  margin: 0 0 1rem 1.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+// Wrap the top links line between items, never inside one.
+.contact-links a {
+  white-space: nowrap;
+}
+
+// Same small grey text minima uses for its footer columns.
+.footer-tagline {
+  @include relative-font-size(0.9375);
+  color: $grey-color;
+  margin-bottom: 0;
+}
+
+.callout {
+  padding: 0.75rem 1rem;
+  border-left: 4px solid $brand-color;
+  background: rgba($brand-color, 0.07);
+  border-radius: 0 4px 4px 0;
+}
+
+// Quieter tables: no grid, shading, or zebra stripes; just thin row dividers.
+.page-content table {
+  border: none;
+  color: $text-color;
+
+  tr:nth-child(even) {
+    background-color: transparent;
+  }
+
+  th, td {
+    border: none;
+    border-bottom: 1px solid $grey-color-light;
+    padding: ($spacing-unit / 3) ($spacing-unit / 2);
+  }
+
+  // Line the first column up with the page's left edge.
+  th:first-child, td:first-child {
+    padding-left: 0;
+  }
+
+  th {
+    background-color: transparent;
+    color: $grey-color;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  th:last-child, td:last-child {
+    padding-right: 0;
+  }
+
+  td:last-child {
+    color: $grey-color;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .headshot {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+
+  .page-content table {
+    font-size: 0.9em;
+
+    th, td {
+      padding-left: $spacing-unit / 4;
+      padding-right: $spacing-unit / 4;
+    }
+  }
+}

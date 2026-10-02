@@ -1,0 +1,16 @@
+title: "Jay DeYoung"
+description: "Young Investigator at Ai2 · Building AI tools and agents for scientists"
+theme: minima   # clean Jekyll theme (built into GitHub Pages)
+baseurl: ""     # leave empty for a user site (jayded.github.io)
+url: "https://jayded.github.io"
+
+# minima 2.5 (the version GitHub Pages uses) expects author as a plain string
+author: Jay DeYoung
+
+# Build settings
+markdown: kramdown
+
+# Serve README.md as the home page. jekyll-readme-index skips READMEs that have
+# front matter unless this is set.
+readme_index:
+  with_frontmatter: true

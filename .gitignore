@@ -1,0 +1,13 @@
+# Jekyll build output and caches
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Local Ruby/Bundler installs
+.bundle/
+vendor/
+
+# Tooling caches and OS cruft
+.ruff_cache/
+.DS_Store
