@@ -93,3 +93,64 @@ $content-width: 1100px;
     }
   }
 }
+
+// Dark mode: follows the visitor's system setting. Light mode is minima's defaults above.
+$dark-background:   #17181c;
+$dark-text:         #e3e3e3;
+$dark-grey:         #9a9ca3;
+$dark-grey-light:   #33363d;
+$dark-link:         #6ea8fe;
+$dark-link-visited: #8fb0e8;
+
+:root {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: $dark-text;
+    background-color: $dark-background;
+  }
+
+  a {
+    color: $dark-link;
+
+    &:visited {
+      color: $dark-link-visited;
+    }
+
+    &:hover {
+      color: $dark-text;
+    }
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid $dark-grey-light;
+  }
+
+  .callout {
+    border-left-color: $dark-link;
+    background: rgba($dark-link, 0.1);
+  }
+
+  .page-content table {
+    color: $dark-text;
+
+    th, td {
+      border-bottom-color: $dark-grey-light;
+    }
+
+    th, td:last-child {
+      color: $dark-grey;
+    }
+  }
+
+  .site-footer {
+    border-top-color: $dark-grey-light;
+  }
+
+  .footer-tagline {
+    color: $dark-grey;
+  }
+}
